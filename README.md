@@ -70,7 +70,7 @@ Board Manager URL for ESP8266 Generic Lib:
 +-----------------+
 | ESP8266         |
 |                 |
-|  A0  ---- Power |
+|  A0  ---- VCC   |
 |  GND ---- GND   |
 +-----------------+
 ```
