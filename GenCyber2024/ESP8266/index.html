@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser and LED Control Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: inline-block;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .switch, .color {
+            margin: 20px 0;
+        }
+        .switch label {
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            position: relative;
+        }
+        .switch input {
+            display: none;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .color button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .color button:hover {
+            background-color: #1976D2;
+        }
+        .color button:active {
+            background-color: #0D47A1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Control Interface</h1>
+    
+    <div class="switch">
+        <h3>Laser 1</h3>
+        <label>
+            <input type="checkbox" id="laser1">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="switch">
+        <h3>Laser 2</h3>
+        <label>
+            <input type="checkbox" id="laser2">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="switch">
+        <h3>Laser 3</h3>
+        <label>
+            <input type="checkbox" id="laser3">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="switch">
+        <h3>LED</h3>
+        <label>
+            <input type="checkbox" id="led">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="color">
+        <h3>LED Color</h3>
+        <button id="red">Red</button>
+        <button id="white">White</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('laser1').addEventListener('change', function() {
+        toggleDevice('laser1', this.checked);
+        console.log('Laser 1 is ' + (this.checked ? 'ON' : 'OFF'));
+    });
+
+    document.getElementById('laser2').addEventListener('change', function() {
+        toggleDevice('laser2', this.checked);
+        console.log('Laser 2 is ' + (this.checked ? 'ON' : 'OFF'));
+    });
+
+    document.getElementById('laser3').addEventListener('change', function() {
+        toggleDevice('laser3', this.checked);
+        console.log('Laser 3 is ' + (this.checked ? 'ON' : 'OFF'));
+    });
+
+    document.getElementById('led').addEventListener('change', function() {
+        toggleDevice('led', this.checked);
+        console.log('LED is ' + (this.checked ? 'ON' : 'OFF'));
+    });
+
+    document.getElementById('red').addEventListener('click', function() {
+        setColor('red');
+        console.log('LED color set to red');
+    });
+
+    document.getElementById('white').addEventListener('click', function() {
+        setColor('white');
+        console.log('LED color set to white');
+    });
+
+    function toggleDevice(device, state) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/toggle', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(`device=${device}&state=${state ? 'on' : 'off'}`);
+    }
+
+    function setColor(color) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/setcolor', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(`color=${color}`);
+    }
+</script>
+
+</body>
+</html>
