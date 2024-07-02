@@ -30,9 +30,8 @@ The lasers are connected to a single ESP8266 NodeMCU V3 on the pins specifed in 
 | Dependencies                   |
 |--------------------------------|
 | ESP8266 Generic Arduino Lib    |
-|--------------------------------|
 | FastLED Arduino Lib            |
-|--------------------------------|
+
 Board Manager URL for ESP8266 Generic Lib:
 - https://arduino.esp8266.com/stable/package_esp8266com_index.json
 
