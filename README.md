@@ -59,6 +59,8 @@ Board Manager URL for ESP8266 Generic Lib:
 
 # Control 🕹️
 There's two options to control the lasers and LEDs.
+
+The IP in use is an EXAMPLE for what I had. 
 1. Terminal
    - curl http://192.168.0.101/laser/off
    - curl http://192.168.0.101/laser/on?num=5 // [off/on] turn laser 5 on (each laser is controlled via GPIO Pins on ESP8266)
