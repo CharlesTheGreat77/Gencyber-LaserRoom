@@ -21,10 +21,23 @@ This is the code for the laser room (Escape Room) for the GenCyber summer camp.
 
   ## Relay(s)
   ![Relay](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/2648bcdc-ac58-4274-9618-2df230cf8dfc)
+
+  ## Laser Doorway
+  ![LaserWall](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/bc658bbf-aabf-45f0-aaf9-04699a408a1e)
+
+  ## Laser Mid-room
+  ![Midroom](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/2a15e189-317d-43b5-9b83-9d7d293f8cfa)
+
+  ## Starting Path
+  ![Start](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/60d7cfba-36bb-43d4-a94c-ab23dfd324fe)
+
+
 </details>
 
 # How it works ⚙️
 The lasers are connected to a single ESP8266 NodeMCU V3 on the pins specifed in the ```lasercontrol.ino``` file. All ESPs are connected to a single AP, which allows seemless control of the LEDs and the lasers. The laser is pointed directly at the outdoor solarpost cap "sensors" that are wired to an esp8266. LED strips are wired to a single ESP8266 with an external power supply to provide 5v to the LEDs. The sensor(s) on boot calibrates with the laser sensor values being the "norm". Any huge drop in the values will signify that someone/something got in the way of the laser and sensor. The sensors send an http request to the laser controlled ESP8266 which then turn OFF/ON the lasers and turns the LEDs red when tripped for the seconds specified in the ```LaserSensor.ino``` file. 
+
+Do to the ease of controlling the room with the local http server, one can add challenges around the room for individuals to solve for lasers to turn off after a challenge is complete! Or they can go the mission impossible route! 🤯
 
 # Arduino Dependencies 📝
 | Dependencies                   |
