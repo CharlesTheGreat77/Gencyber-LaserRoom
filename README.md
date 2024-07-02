@@ -5,13 +5,9 @@ This is the code for the laser room (Escape Room) for the GenCyber summer camp.
 | Hardware                       |
 |--------------------------------|
 | ESP8266 NodeMCU v3   ±$5-10    |
-|--------------------------------|
 | Solar Post Cap       ±$5-10    |
-|--------------------------------|
 | Lasers               ±$5-10    |
-|--------------------------------|
 | LED Strip (optional) ±$10      |
-|--------------------------------|
 | Mirrors (optional)   ±$5       |
 |--------------------------------|
 
