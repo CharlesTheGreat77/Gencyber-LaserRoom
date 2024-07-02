@@ -72,7 +72,9 @@ The IP in use is an EXAMPLE for what I had.
    - ```go build -o web_interface web_interface.go``` // to compile
    - ```./web_interface``` // run the webserver
   
-Note: Add/Remove switches in the webserver as needed for the amount of lasers in use. (in our case we had 6 lasers but only 3 will be controllable).
+The webserver runs by default on ```localhost:8080```
+
+Note: Add/Remove switches in the webserver as needed for the amount of lasers in use. (in our case we had 6 lasers but only 3 will be controllable). Additionally, the ```index.html``` was made by AI (for now) and I am not proud of it. 
   
 
 <details>
