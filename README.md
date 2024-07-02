@@ -49,6 +49,53 @@ Board Manager URL for ESP8266 Generic Lib:
 - https://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 
+# ESP8266 -> Relay(s) -> Laser(s)
+```
++-----------------+
+| ESP8266         |
+|                 |
+|  D1 ---- Relay 1|
+|  D2 ---- Relay 2|
+|  D3 ---- Relay 3|
+|  D5 ---- Relay 4|
+|  D6 ---- Relay 5|
+|  D7 ---- Relay 6|
++-----------------+
+```
+- Relays are used to control these 5v lasers from this ESP8266 (3v3).
+- Change the pin layout in ```lasercontrol.ino``` as needed.
+
+# ESP8266 -> Solar Post Sensor(s)
+```
++-----------------+
+| ESP8266         |
+|                 |
+|  A0  ---- Power |
+|  GND ---- GND   |
++-----------------+
+```
+- Expose the power and ground wires in the back of the solar post sensor to connect to the ESP8266 analog and ground pins.
+
+# ESP8266 -> LEDs
+```
++-----------------+
+| ESP8266         |
+|                 |
+|  D4  ---- DATA  |
+|  VIN ---- VCC   |
+|  GND ---- GND   |
++-----------------+
+```
+# Led -> External Power Supply
+```
++------------------+
+| External Power   |
+|                  |
+|  VCC ---- VCC    |
+|  GND ---- GND    |
++------------------+
+```
+
 # Setup 🔨
 1. Specify the AP and Password the ESP(s) will be on in all of the INO files.
 2. Change the IP addresses in ```LaserSensor.ino``` file to the IP Addresses of the laser ESP, and the LED ESP.
