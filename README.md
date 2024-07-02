@@ -9,8 +9,6 @@ This is the code for the laser room (Escape Room) for the GenCyber summer camp.
 | Lasers               ±$5-10    |
 | LED Strip (optional) ±$10      |
 | Mirrors (optional)   ±$5       |
-|--------------------------------|
-
 
 <details>
   <summary>Images/Videos</summary>
