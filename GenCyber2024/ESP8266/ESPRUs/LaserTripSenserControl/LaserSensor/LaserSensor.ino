@@ -50,11 +50,6 @@ void alarm() {
   sendRequest("http://192.168.0.101/laser/on"); 
 }
 
-void laser_Off() {
-  Serial.print("[*] Turning off laser 5..\n");
-  sendRequest("http://192.168.0.115/laser/off?num=5");
-}
-
 void calibration() {
   if (cal_Count >= CALIBRATION_REQUIREMENT) {
     armState = true;
