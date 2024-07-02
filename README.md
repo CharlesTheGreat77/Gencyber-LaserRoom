@@ -57,6 +57,8 @@ There's two options to control the lasers and LEDs.
    - ```go build -o web_interface web_interface.go``` // to compile
    - ```./web_interface``` // run the webserver
   
+Note: Add/Remove switches in the webserver as needed for the amount of lasers in use. (in our case we had 6 lasers but only 3 will be controllable).
+  
 
 <details>
   <summary>Web Interface</summary>
