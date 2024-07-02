@@ -46,7 +46,7 @@ Board Manager URL for ESP8266 Generic Lib:
 1. Specify the AP and Password the ESP(s) will be on in all of the INO files.
 2. Change the IP addresses in ```LaserSensor.ino``` file to the IP Addresses of the laser ESP, and the LED ESP.
 3. Setup laser(s) and mirror positions.
-4. Setup the LEDs.
+4. Setup the LEDs. Change number of LEDs in the ```EAPLedLights.ino``` file.
 5. Make sure the lasers are hitting the solarpost cap sensors DIRECTLY.
 6. Power on the sensors with the lasers directly hitting the sensor. (takes only a few seconds after boot to calibrate)
 
