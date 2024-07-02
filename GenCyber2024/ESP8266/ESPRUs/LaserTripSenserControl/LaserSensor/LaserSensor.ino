@@ -3,8 +3,8 @@
 #include <WiFiClient.h>
 #include <ESP8266WiFi.h>
 
-const char* ssid_name = "GenCyber2";
-const char* ssid_password = "cyberpass";
+const char* ssid_name = "ssid";
+const char* ssid_password = "ssid_password";
 
 float highestSensorInput = 0.0;
 int cal_Count = 0;
