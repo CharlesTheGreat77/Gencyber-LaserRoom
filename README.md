@@ -56,6 +56,13 @@ There's two options to control the lasers and LEDs.
    - Compile and run the ```web_interface.go``` file to start the local webserver to control the lasers with the ```index.html``` in the repo.
    - ```go build -o web_interface web_interface.go``` // to compile
    - ```./web_interface``` // run the webserver
+  
+
+<details>
+  <summary>Web Interface</summary>
+<img width="1059" src="https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/0fc6030c-87e9-466b-acca-274cb7b91642">
+
+</details>
 
 # Conlusion
 With all the work done, I am glad the students enjoyed the laser room, and glad all worked as expected. We had issues with the power distribution with the lasers, but after rigging a 9v to each, we seemed to get through the hours of it operating.
