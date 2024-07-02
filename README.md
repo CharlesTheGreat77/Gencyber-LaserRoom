@@ -52,6 +52,7 @@ There's two options to control the lasers and LEDs.
    - curl http://192.168.0.102/led/off // [off/on] turn off LEDs
    - curl http://192.168.0.102/led/on?color=white // [red/white] only two options for colors, change in ```EAPLedLights.ino```
 2. Web Interface
+   - Change the IP Addresses of the laser and the LEDs in the ```web_interface.go```.
    - Compile and run the ```web_interface.go``` file to start the local webserver to control the lasers with the ```index.html``` in the repo.
    - ```go build -o web_interface web_interface.go``` // to compile
    - ```./web_interface``` // run the webserver
