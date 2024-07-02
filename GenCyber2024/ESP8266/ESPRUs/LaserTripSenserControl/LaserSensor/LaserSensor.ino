@@ -43,7 +43,7 @@ void alarm() {
   sendRequest("http://192.168.0.101/laser/off");
   delay(2000);
 
-  Serial.print("[*] Turning LEDS white..\n");
+  Serial.print("[*] Turning LEDS off..\n");
   sendRequest("http://192.168.0.102/led/off");
 
   Serial.print("[*] Turning on lasers...\n");
