@@ -30,6 +30,11 @@ This is the code for the laser room (Escape Room) for the GenCyber summer camp.
 
   ## Starting Path
   ![Start](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/60d7cfba-36bb-43d4-a94c-ab23dfd324fe)
+  ## Students Solving a Challenge
+  ![Challenge](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/1bea5e79-cac7-43a1-9413-29d0e7bf60d2)
+
+  ## Student trips the laser! (HE'S OUT) 🚨
+  ![ALARM](https://github.com/CharlesTheGreat77/Gencyber-LaserRoom/assets/27988707/c2d9a7a8-9934-4ae5-bcba-3304d2e0c09a)
 
 
 </details>
